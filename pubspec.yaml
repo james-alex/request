@@ -1,0 +1,17 @@
+name: request
+description: >-
+  A minimal abstraction of the 'http' package's 'get' and 'post'
+  methods that automatically throws an exception when any non-200
+  status code is returned.
+version: 0.1.0
+homepage: https://github.com/james-alex/request
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  http: ^0.13.3
+
+dev_dependencies:
+  pedantic: ^1.11.0
+  test: ^1.17.4
