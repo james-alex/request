@@ -3,4 +3,5 @@
 /// status code is returned.
 library request;
 
+export 'src/request_uri.dart';
 export 'src/request.dart';

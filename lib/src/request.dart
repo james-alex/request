@@ -4,7 +4,11 @@ import 'package:http/http.dart' hide get, post;
 
 export 'package:http/http.dart' hide get, post;
 
+/// {@template request.get}
+///
 /// Sends an HTTP GET request with the given headers to the given URL.
+///
+/// {@endtemplate}
 ///
 /// {@template request.httpStatusException}
 ///
@@ -18,7 +22,11 @@ Future<Response> get(Uri url, {Map<String, String>? headers}) async {
   return response;
 }
 
+/// {@template request.request}
+///
 /// Returns the body of the requested [uri].
+///
+/// {@endtemplate}
 ///
 /// {@macro request.httpStatusException}
 Future<String> request(Uri uri, {Map<String, String>? headers}) async {
@@ -26,6 +34,8 @@ Future<String> request(Uri uri, {Map<String, String>? headers}) async {
   return response.body;
 }
 
+/// {@template request.post}
+///
 /// Sends an HTTP POST request with the given headers and body to the given URL.
 ///
 /// [body] sets the body of the request. It can be a [String], a [List] or
@@ -40,6 +50,8 @@ Future<String> request(Uri uri, {Map<String, String>? headers}) async {
 /// x-www-form-urlencoded"; this cannot be overridden.
 ///
 /// [encoding] defaults to [utf8].
+///
+/// {@endtemplate}
 ///
 /// {@macro request.httpStatusException}
 Future<Response> post(

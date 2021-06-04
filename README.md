@@ -15,11 +15,11 @@ wrap `http`'s equivalent methods, but throw a [HttpStatusException] when any
 status other than `200` is returned.
 
 ```dart
-final response = http.get(uri);
+final response = await http.get(uri);
 ```
 
 ```dart
-final reponse = http.post(uri);
+final reponse = await http.post(uri);
 ```
 
 Additionally, `request` exposes the [request] method, which wraps [get] and
@@ -27,7 +27,17 @@ returns the response's body as a [String]. Like [get] and [post], an exception
 will be thrown when any status other than `200` is returned.
 
 ```dart
-final body = http.request(uri);
+final body = await http.request(uri);
+```
+
+## Uri Extension Methods
+
+[get], [post], and [request] are also available as extension methods on
+Dart's [Uri] object.
+
+```dart
+final url = Uri.parse('https://pub.dev/packages/request');
+final body = await url.request();
 ```
 
 ## HttpStatusException
