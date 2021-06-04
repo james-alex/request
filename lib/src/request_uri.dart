@@ -22,5 +22,6 @@ extension RequestUri on Uri {
     Map<String, String>? headers,
     Object? body,
     Encoding? encoding,
-  }) async => http.post(this, headers: headers, body: body, encoding: encoding);
+  }) async =>
+      http.post(this, headers: headers, body: body, encoding: encoding);
 }
